@@ -9,6 +9,10 @@ import java.util.Optional;
 public class OrderDB {
     private Map<Integer, Order> orders = new HashMap<>();
 
+    public OrderDB(Map<Integer, Order> orders) {
+        this.orders = orders;
+    }
+
     public void add(Order newOrder){
         orders.put(newOrder.getOrderNumber(), newOrder);
     }
@@ -18,8 +22,8 @@ public class OrderDB {
 
     }
 
-    public Optional<Map<Integer, Order>> getOrders() {
-        return Optional.of(orders);
+    public Map<Integer, Order> getOrders() {
+        return orders;
     }
 
     public void setOrders(Map<Integer, Order> orders) {
