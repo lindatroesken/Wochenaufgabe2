@@ -13,6 +13,11 @@ public class OrderDB {
         orders.put(newOrder.getOrderNumber(), newOrder);
     }
 
+    public Optional<Order> getByOrderNumber(int orderNumber){
+        return Optional.ofNullable(orders.get(orderNumber));
+
+    }
+
     public Optional<Map<Integer, Order>> getOrders() {
         return Optional.of(orders);
     }

@@ -2,7 +2,9 @@ package repositories;
 
 import model.Product;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ProductDB {
@@ -21,8 +23,8 @@ public class ProductDB {
 
     }
 
-    public Map<Integer, Product> list(){
-        return products;
+    public List<Product> list(){
+        return new ArrayList<>(products.values());
 
     }
 
