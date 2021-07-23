@@ -32,12 +32,19 @@
               - getter- und setter schreiben
               - toString schreiben
       - OrderDB
+        - Liste erstellen -> ArrayList, HashMap oder LinkedList
         - Methoden:
-            - add-Methode
+            - `add(Order newOrder){}`(Eine Bestellung hinzufügen)
+            - get-Methode(Eine Bestellung auslesen)  
             - getter ?
-            - list
-            - toString 
+            - list ->`public List<OrderDB> listwithAllorders(){}`
+            - toString
+    
+      - OrderService
+        - Füge eine Bestellung über einen OrderService hinzu
+        - Methode:
+            - `addOrder(Order newOrder){}` ruft add-Methode von OrderDB auf: orderDB.add
+            - `listOrders`
         
-              
     
                 
