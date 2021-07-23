@@ -8,7 +8,7 @@
 
   ###Produktstrang
     - Welche Klassen erstellen wir:
-    - Produkt Klasse(Entität) `Product (int artikelNummer, String produktName)` erstellen(Produkt Informatiosnbereich)
+    - Produkt Klasse(Entität) `model.Product.Product (int artikelNummer, String produktName)` erstellen(Produkt Informatiosnbereich)
         - Methoden
             - getter- und setter schreiben
             - toString schreiben  
@@ -27,7 +27,7 @@
     
 ###Orderstrang
   - Welche Klassen erstellen wir:
-      - Order Klasse(Entität) `Order (int bestellNummer, List<Product> listOfOrders){}` erstellen(Produkt Informatiosnbereich)
+      - Order Klasse(Entität) `Order (int bestellNummer, List<model.Product.Product> listOfOrders){}` erstellen(Produkt Informatiosnbereich)
           - Methoden
               - getter- und setter schreiben
               - toString schreiben

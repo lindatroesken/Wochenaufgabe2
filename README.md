@@ -9,4 +9,4 @@ Schreibe ein Bestellsystem (mit Tests!).
 - Gib alle Bestellungen aus
 - nutze für die get Methoden als Rückgabewert ein Optional
 - throw eine Exception wenn Produkte bestellt werden sollen die nicht existieren
-- Nutze anstelle einer Product Klasse ein Interface und implementiere verschiedene Ausführungen
+- Nutze anstelle einer model.Product.Product Klasse ein Interface und implementiere verschiedene Ausführungen
