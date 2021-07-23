@@ -4,6 +4,7 @@ public class Product {
 
         private int productNumber;
         private String productName;
+        private double price = 5d;
 
 
         public Product(int productNumber, String productName){
