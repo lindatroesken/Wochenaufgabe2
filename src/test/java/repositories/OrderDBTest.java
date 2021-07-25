@@ -2,6 +2,7 @@ package repositories;
 
 import model.Order;
 import model.Product;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -20,6 +21,7 @@ class OrderDBTest {
         productList.add(product1);
         productList.add(product2);
         Order order1 = new Order(10, productList);
+        Order order2 = new Order(11, productList);
 
         Map<Integer, Order> orders = new HashMap<>();
         orders.put(order1.getOrderNumber(), order1);
@@ -28,7 +30,9 @@ class OrderDBTest {
 
         // WHEN
         Optional<Order> actualOrder = orderDB.getByOrderNumber(10);
-        //System.out.println(actualOrder.get().getOrderNumber());
+
+        System.out.println(orderDB.list());
+        System.out.println(actualOrder.get());
         // THEN
         assertEquals(10, actualOrder.get().getOrderNumber());
     }
