@@ -1,6 +1,7 @@
 import model.Order;
 import model.Product;
 import repositories.ProductDB;
+import repositories.ProductNotFoundException;
 import service.OrderService;
 
 import java.util.ArrayList;
@@ -22,9 +23,9 @@ public class AppMain {
         productList3.add(product2);
         productList3.add(product1);
 
-        Order myFirstOrder = new Order(1, productList1);
-        Order mySecondOrder = new Order(2, productList2);
-        Order myThirdOrder = new Order(3, productList3);
+        Order myFirstOrder = new Order(111, productList1);
+        Order mySecondOrder = new Order(112, productList2);
+        Order myThirdOrder = new Order(113, productList3);
 
         OrderService myOrders = new OrderService();
         //myOrders.add(new Order());
@@ -37,6 +38,14 @@ public class AppMain {
         String product4 = "Butter";
         myOrders.addProduct(myFirstOrder.getOrderNumber(), product4);
         myOrders.printOrderList();
+        product4 = "Buter";
+        try {
+            myOrders.addProduct(myFirstOrder.getOrderNumber(), product4);
+        } catch (ProductNotFoundException e) {
+            System.out.println("Product not added: " + e.getMessage());
+        }
+        myOrders.printOrderList();
+
 
 
 

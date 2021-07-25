@@ -36,13 +36,12 @@ public class ProductDB {
     }
 
     public Optional<Product> getByProductName(String productName){
-        if(products.containsValue(productName)){
-            for (Product product : list()) {
+             for (Product product : list()) {
                 if(product.getProductName().equals(productName)) {
-                    return Optional.ofNullable(product);
+                    return Optional.of(product);
                 }
             }
-        }
+
         return Optional.empty();
     }
 

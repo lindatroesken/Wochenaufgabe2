@@ -4,6 +4,7 @@ import model.Order;
 import model.Product;
 import repositories.OrderDB;
 import repositories.ProductDB;
+import repositories.ProductNotFoundException;
 
 import java.util.List;
 import java.util.Optional;
@@ -39,6 +40,8 @@ public class OrderService {
             if (order.isPresent()){
                 order.get().addProductToList(newProduct.get());
             }
+        }else {
+            throw new ProductNotFoundException(newProductName);
         }
     }
 
