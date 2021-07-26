@@ -2,15 +2,16 @@ package repositories;
 
 import model.Order;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 public class OrderDB {
     private Map<Integer, Order> orders = new HashMap<>();
 
     public OrderDB(Map<Integer, Order> orders) {
         this.orders = orders;
+    }
+    public OrderDB(){
+
     }
 
     public void add(Order newOrder){
@@ -29,4 +30,13 @@ public class OrderDB {
     public void setOrders(Map<Integer, Order> orders) {
         this.orders = orders;
     }
+
+
+    public List<Order> listOfOrders() {
+        //return orders.values().stream().toList(); /*Möglichkeit 1*/
+        return new ArrayList<>(orders.values()); /*Möglichkeit 2*/
+    }
 }
+
+
+
